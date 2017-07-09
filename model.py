@@ -381,6 +381,8 @@ Initializing a new one.
                         if accept < 1 and np.random.uniform() > accept:
                             np.copyto(zhats[img], zhats_old[img])
 
+                    config.hmcBeta *= config.hmcAnneal
+
                 else:
                     assert(False)
 
